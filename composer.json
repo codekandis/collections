@@ -1,0 +1,54 @@
+{
+	"name": "codekandis/collections",
+	"description": "`codekandis/collections` is a library providing collection interfaces and classes.",
+	"keywords": [
+		"php",
+		"library",
+		"collections",
+		"interfaces",
+		"classes"
+	],
+	"minimum-stability": "stable",
+	"prefer-stable": true,
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Christian Ramelow",
+			"email": "info@codekandis.net",
+			"homepage": "https://codekandis.net",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"email": "info@codekandis.net",
+		"issues": "https://github.com/codekandis/collections/issues",
+		"docs": "https://github.com/codekandis/collections/blob/master/README.md",
+		"source": "https://github.com/codekandis/collections/tree/master"
+	},
+	"require": {
+		"php": ">=8.3"
+	},
+	"require-dev": {
+		"roave/security-advisories": "dev-latest"
+	},
+	"autoload": {
+		"psr-4": {
+			"CodeKandis\\Collections\\": [
+				"src/"
+			]
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"CodeKandis\\Collections\\Build\\": [
+				"build/"
+			],
+			"CodeKandis\\Collections\\Tests\\": [
+				"tests/"
+			]
+		}
+	},
+	"scripts": {
+		"test": "/usr/bin/env php -dxdebug.mode=coverage ./vendor/phpunit/phpunit/phpunit --configuration ./build/phpunit.xml"
+	}
+}
